@@ -1,0 +1,74 @@
+:root {
+  --bg: #f6f5f1;
+  --bg-raised: #efeee8;
+  --ink: #15161a;
+  --ink-soft: #4d4e54;
+  --accent: #4338ca;
+  --accent-soft: #e3e0fb;
+  --coral: #ff5a5f;
+  --line: #dcdad1;
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Space Grotesk", "Helvetica Neue", sans-serif;
+
+  --edge: clamp(1.5rem, 5vw, 5rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* custom cursor replaces the system one only on fine-pointer devices */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
