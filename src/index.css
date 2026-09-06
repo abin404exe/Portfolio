@@ -13,7 +13,30 @@
 
   --edge: clamp(1.5rem, 5vw, 5rem);
 }
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink-soft) var(--bg);
+}
 
+/* WebKit — Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ink-soft);
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
 * {
   box-sizing: border-box;
 }
