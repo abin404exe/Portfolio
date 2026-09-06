@@ -41,6 +41,16 @@ html {
   box-sizing: border-box;
 }
 
+[data-theme="dark"] {
+  --bg: #15161a;
+  --bg-raised: #1c1d22;
+  --ink: #f2f1ec;
+  --ink-soft: #9a9ba3;
+  --accent: #8b7cf6;
+  --accent-soft: #2a2650;
+  --coral: #ff6b70;
+  --line: #2b2c32;
+}
 html {
   scroll-behavior: smooth;
 }

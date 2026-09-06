@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import ThemeToggle from './components/ThemeToggle'
 import './App.css'
 
 export default function App() {
@@ -28,25 +29,22 @@ export default function App() {
       {loaded && (
         <>
           <nav className="nav">
-            <a href="#top" className="nav__mark" data-cursor="top">
-              AB
-            </a>
-            <div className="nav__links">
-              <a href="#work" data-cursor="go">
-                work
-              </a>
-              <a href="#about" data-cursor="go">
-                about
-              </a>
-              <a href="#contact" data-cursor="go">
-                contact
-              </a>
-            </div>
-            <span className="nav__status">
-              <span className="nav__status-dot" />
-              Open to work
-            </span>
-          </nav>
+  <a href="#top" className="nav__mark" data-cursor="top">
+    AB
+  </a>
+  <div className="nav__links">
+    <a href="#work" data-cursor="go">work</a>
+    <a href="#about" data-cursor="go">about</a>
+    <a href="#contact" data-cursor="go">contact</a>
+  </div>
+  <div className="nav__right">
+    <span className="nav__status">
+      <span className="nav__status-dot" />
+      Open to work
+    </span>
+    <ThemeToggle />
+  </div>
+</nav>
           <main>
             <Hero />
             <About />
